@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8td-PN-dPd">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -17,7 +17,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPE-6R-X09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1489" y="-806"/>
+            <point key="canvasLocation" x="2021" y="-806"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9bZ-wH-my6">
@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nai-Mo-3Hn">
-                                <rect key="frame" x="-27" y="107" width="375" height="240"/>
+                                <rect key="frame" x="-27" y="196" width="375" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MenuButton.002.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yqP-8a-86g">
-                                <rect key="frame" x="0.0" y="256" width="320" height="240"/>
+                                <rect key="frame" x="0.0" y="345" width="320" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MenuButton.001.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,6 +47,13 @@
                                     <segue destination="BYZ-38-t0r" kind="push" id="UCo-9o-T5L"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analog." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cgn-eI-Nhe">
+                                <rect key="frame" x="107" y="174" width="96" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -54,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lg5-Tw-KHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1096" y="-533"/>
+            <point key="canvasLocation" x="1628" y="-533"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -185,25 +192,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1489" y="-97"/>
+            <point key="canvasLocation" x="2021" y="-97"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="s6g-er-Bsd">
+        <scene sceneID="N8h-F8-UKk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OHk-g9-no1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8td-PN-dPd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e52-QQ-qU6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hLe-91-EDV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dWa-87-Y6A" kind="relationship" relationship="rootViewController" id="T2G-DY-LyG"/>
+                        <segue destination="dWa-87-Y6A" kind="relationship" relationship="rootViewController" id="pX3-uu-xeS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dve-dN-Q5t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WA-M8-J3m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="564" y="-533"/>
+            <point key="canvasLocation" x="1096" y="-533"/>
         </scene>
     </scenes>
     <resources>

@@ -16,37 +16,27 @@
 @property (weak, nonatomic) IBOutlet UIImageView *clock_min;
 @property (weak, nonatomic) IBOutlet UIImageView *clock_sec;
 @property (weak, nonatomic) IBOutlet UIImageView *clock_set;
-@property (weak, nonatomic) IBOutlet UIImageView *clock_set02;
-@property (weak, nonatomic) IBOutlet UIImageView *clock_set03;
 
 //@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UISlider *timeSetSlider;
-@property (weak, nonatomic) IBOutlet UISlider *timeSetSlider02;
-@property (weak, nonatomic) IBOutlet UISlider *timeSetSlider03;
 
 
 @property (weak, nonatomic) IBOutlet UILabel *timeSetLabel;
-@property (weak, nonatomic) IBOutlet UILabel *timeSetLabel02;
-@property (weak, nonatomic) IBOutlet UILabel *timeSetLabel03;
-
-
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *timeSetButton;
 - (IBAction)timeSetButton:(id)sender;
 - (IBAction)stopButton:(id)sender;
-
 
 @end
 
 @implementation ViewController{
     NSTimer *timer;
     float setHourAngle;
-    float setHourAngle02;
-    float setHourAngle03;
     AVAudioPlayer *ClockAlerm_sound;
     AVAudioPlayer *ClockSec_sound;
     int timeSetCounter;
     float t;
+    NSInteger setHour;
 }
 
 - (void)viewDidLoad {
@@ -54,17 +44,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     //self.datePicker.alpha = 0;//UIDatePickerは初めは非表示
-    self.timeSetSlider.alpha = 0;//スライダーは初めは非表示
-    self.timeSetSlider02.alpha = 0;//スライダーは初めは非表示
-    self.timeSetSlider03.alpha = 0;//スライダーは初めは非表示
-    
-    self.timeSetLabel.alpha = 0;
-    self.timeSetLabel02.alpha = 0;
-    self.timeSetLabel03.alpha = 0;
-    
-    self.clock_set.alpha = 0;
-    self.clock_set02.alpha = 0;
-    self.clock_set03.alpha = 0;
     
     //self.timeSetButton.alpha = 1;//timeSetButtonは初めは表示
     
@@ -79,6 +58,8 @@
     NSString *ClockSec_path = [[NSBundle mainBundle]pathForResource:@"ClockSec_sound" ofType:@"mp3"];
     NSURL *ClockSec_url = [NSURL fileURLWithPath:ClockSec_path];
     ClockSec_sound = [[AVAudioPlayer alloc]initWithContentsOfURL:ClockSec_url error:NULL];//秒針の音
+    
+    [self.timeSetSlider addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
     
 }
 
@@ -103,15 +84,17 @@
     self.clock_min.transform = CGAffineTransformMakeRotation(minAngle);
     self.clock_sec.transform = CGAffineTransformMakeRotation(secAngle);
     
-    if(((fabs(setHourAngle - hourAngle)<0.001 || fabs(setHourAngle02 - hourAngle)<0.001 || fabs(setHourAngle03 - hourAngle)<0.001 )) && setHourAngle!=0){
-        [ClockAlerm_sound play];//アラームの音を鳴らす
+    if((fabs(setHourAngle - hourAngle)<0.001) && setHourAngle!=0){
+        if((setHour<=12 && hour<=12)||(setHour>=13 && hour>=13)){
+            [ClockAlerm_sound play];//アラームの音を鳴らす
+        }
     }//セットした時間で起こる処理
 }
 
 - (void)valueChange:(UISlider*)timeSetSlider{
     
     t = self.timeSetSlider.value;
-    NSInteger setHour = floorf(t);//セットした時間を取得
+    setHour = floorf(t);//セットした時間を取得
     
     float tDec = t - floorf(t);
     NSInteger setMin = 60*tDec;//セットした分を取得
@@ -126,46 +109,6 @@
     
     self.timeSetLabel.textColor = [UIColor redColor];
     self.timeSetLabel.text = [NSString stringWithFormat:@"%02d:%02d:00",setHour,setMin];
-}
-
-- (void)valueChange02:(UISlider*)timeSetSlider{
-    
-    t = self.timeSetSlider02.value;
-    NSInteger setHour = floorf(t);//セットした時間を取得
-    
-    float tDec = t - floorf(t);
-    NSInteger setMin = 60*tDec;//セットした分を取得
-    
-    NSInteger setSec = 1;
-    
-    float setSecAngle = (M_PI*2)/60*setSec;
-    float setMinAngle = (M_PI*2)/60*setMin+setSecAngle/60;
-    setHourAngle02 = (M_PI*2)/12*setHour+setMinAngle/12;//セットした時間の角度を取得
-    
-    self.clock_set02.transform = CGAffineTransformMakeRotation(setHourAngle02);
-    
-    self.timeSetLabel02.textColor = [UIColor redColor];
-    self.timeSetLabel02.text = [NSString stringWithFormat:@"%02d:%02d:00",setHour,setMin];
-}
-
-- (void)valueChange03:(UISlider*)timeSetSlider{
-
-    t = self.timeSetSlider03.value;
-    NSInteger setHour = floorf(t);//セットした時間を取得
-    
-    float tDec = t - floorf(t);
-    NSInteger setMin = 60*tDec;//セットした分を取得
-    
-    NSInteger setSec = 1;
-    
-    float setSecAngle = (M_PI*2)/60*setSec;
-    float setMinAngle = (M_PI*2)/60*setMin+setSecAngle/60;
-    setHourAngle03 = (M_PI*2)/12*setHour+setMinAngle/12;//セットした時間の角度を取得
-    
-    self.clock_set03.transform = CGAffineTransformMakeRotation(setHourAngle03);
-    
-    self.timeSetLabel03.textColor = [UIColor redColor];
-    self.timeSetLabel03.text = [NSString stringWithFormat:@"%02d:%02d:00",setHour,setMin];
 }
 
 /*
@@ -197,6 +140,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+/*
 - (IBAction)timeSetButton:(id)sender {
     
     timeSetCounter++;
@@ -228,11 +172,10 @@
             
             break;
     }//プラスボタンが押されただけスライダーを表示
-    
-    
     //self.datePicker.alpha = 1;//timeSetButtonが押されたらUIDatePickerを表示
     //self.timeSetButton.alpha =0;//timeSetButtonが押されたらtimeSetButtonを非表示
 }
+*/
 
 - (IBAction)stopButton:(id)sender {
     [ClockAlerm_sound stop];

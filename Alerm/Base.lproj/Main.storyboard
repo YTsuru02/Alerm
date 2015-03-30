@@ -71,84 +71,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Background.png" id="h8A-lK-KWM">
-                                <rect key="frame" x="177" y="-132" width="350" height="263"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Background.png" id="Cyh-Pq-qOt">
-                                <rect key="frame" x="-206" y="-122" width="350" height="263"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lWd-oi-a7d">
+                                <rect key="frame" x="129" y="476" width="63" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock_base" id="ANf-SV-8ZT">
-                                <rect key="frame" x="6" y="75" width="311" height="299"/>
+                                <rect key="frame" x="6" y="162" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XJN-02-L7c">
-                                <rect key="frame" x="115" y="213" width="87" height="24"/>
+                                <rect key="frame" x="115" y="300" width="87" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.001" id="lDJ-8D-0dR">
-                                <rect key="frame" x="3" y="82" width="311" height="299"/>
+                                <rect key="frame" x="3" y="169" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.002" id="niE-YX-huQ">
-                                <rect key="frame" x="3" y="82" width="311" height="299"/>
+                                <rect key="frame" x="3" y="169" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.003" id="UQJ-qb-gd3">
-                                <rect key="frame" x="3" y="82" width="311" height="299"/>
+                                <rect key="frame" x="3" y="169" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.004" id="e8k-xJ-ZK0">
-                                <rect key="frame" x="3" y="82" width="311" height="299"/>
+                                <rect key="frame" x="3" y="169" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.004002.png" id="QhU-Ow-X3G">
-                                <rect key="frame" x="3" y="82" width="311" height="299"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.004003.png" id="0oc-xz-v0S">
-                                <rect key="frame" x="3" y="75" width="311" height="299"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lWd-oi-a7d">
-                                <rect key="frame" x="251" y="401" width="63" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="24" id="xAb-9z-xUN">
-                                <rect key="frame" x="12" y="400" width="233" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nao-AE-pP7">
-                                <rect key="frame" x="251" y="459" width="63" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="24" id="Z0o-PJ-UjB">
-                                <rect key="frame" x="12" y="458" width="233" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m2P-gp-81C">
-                                <rect key="frame" x="251" y="511" width="63" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="24" id="NdV-Z6-KoB">
-                                <rect key="frame" x="12" y="510" width="233" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="caT-Ll-Uba">
-                                <rect key="frame" x="95" y="-40" width="127" height="180"/>
+                                <rect key="frame" x="95" y="47" width="127" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Stop.png">
                                     <color key="titleColor" red="1" green="0.082901251859999997" blue="0.09547381898" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,16 +116,10 @@
                                     <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUc-7A-7Oq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="UfR-Un-DYj">
-                                <rect key="frame" x="33" y="370" width="22" height="22"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="24" id="xAb-9z-xUN">
+                                <rect key="frame" x="4" y="456" width="312" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="timeSetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cdG-Vf-fzt"/>
-                                </connections>
-                            </button>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -178,16 +130,9 @@
                         <outlet property="clock_min" destination="niE-YX-huQ" id="cb4-SF-KhO"/>
                         <outlet property="clock_sec" destination="UQJ-qb-gd3" id="Dzq-NR-Tjw"/>
                         <outlet property="clock_set" destination="e8k-xJ-ZK0" id="NTU-QO-N8r"/>
-                        <outlet property="clock_set02" destination="QhU-Ow-X3G" id="1hQ-NK-4lJ"/>
-                        <outlet property="clock_set03" destination="0oc-xz-v0S" id="ZYw-Xi-mHM"/>
                         <outlet property="timeLabel" destination="XJN-02-L7c" id="70u-uc-OAo"/>
-                        <outlet property="timeSetButton" destination="UfR-Un-DYj" id="fsc-la-7Xs"/>
                         <outlet property="timeSetLabel" destination="lWd-oi-a7d" id="lqV-sQ-TAU"/>
-                        <outlet property="timeSetLabel02" destination="nao-AE-pP7" id="iBR-nl-00G"/>
-                        <outlet property="timeSetLabel03" destination="m2P-gp-81C" id="TNz-lq-A5v"/>
                         <outlet property="timeSetSlider" destination="xAb-9z-xUN" id="KZd-XL-cab"/>
-                        <outlet property="timeSetSlider02" destination="Z0o-PJ-UjB" id="fs6-Ua-044"/>
-                        <outlet property="timeSetSlider03" destination="NdV-Z6-KoB" id="lDU-pi-t7S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -214,7 +159,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Background.png" width="350" height="263"/>
         <image name="MenuButton.001.jpg" width="320" height="240"/>
         <image name="MenuButton.002.jpg" width="320" height="240"/>
         <image name="Stop.png" width="240" height="180"/>
@@ -222,8 +166,6 @@
         <image name="clock.002" width="311" height="299"/>
         <image name="clock.003" width="311" height="299"/>
         <image name="clock.004" width="311" height="299"/>
-        <image name="clock.004002.png" width="311" height="299"/>
-        <image name="clock.004003.png" width="311" height="299"/>
         <image name="clock_base" width="311" height="299"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -27,28 +27,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nai-Mo-3Hn">
-                                <rect key="frame" x="-27" y="196" width="375" height="240"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7KE-Eh-mYC">
+                                <rect key="frame" x="3" y="202" width="315" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="MenuButton.002.jpg">
+                                <state key="normal" image="MenuButton.002.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aHl-75-7Sg" kind="push" id="goh-el-vSy"/>
+                                    <segue destination="aHl-75-7Sg" kind="push" id="xt4-bD-Rki"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yqP-8a-86g">
-                                <rect key="frame" x="0.0" y="345" width="320" height="240"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zKc-dv-V8b">
+                                <rect key="frame" x="3" y="351" width="315" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="MenuButton.001.jpg">
+                                <state key="normal" image="MenuButton.001.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="UCo-9o-T5L"/>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="SWi-RL-TMX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analog." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cgn-eI-Nhe">
-                                <rect key="frame" x="107" y="174" width="96" height="40"/>
+                                <rect key="frame" x="112" y="172" width="96" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -159,8 +159,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MenuButton.001.jpg" width="320" height="240"/>
-        <image name="MenuButton.002.jpg" width="320" height="240"/>
+        <image name="MenuButton.001.png" width="315" height="236"/>
+        <image name="MenuButton.002.png" width="315" height="236"/>
         <image name="Stop.png" width="240" height="180"/>
         <image name="clock.001" width="311" height="299"/>
         <image name="clock.002" width="311" height="299"/>

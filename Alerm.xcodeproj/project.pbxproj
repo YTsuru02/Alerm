@@ -45,8 +45,8 @@
 		E9A7F4E31AB435DF00BF6DAE /* clock.004003@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4D11AB435DF00BF6DAE /* clock.004003@3x.png */; };
 		E9A7F4E41AB435DF00BF6DAE /* Stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4D21AB435DF00BF6DAE /* Stop@2x.png */; };
 		E9A7F4E51AB435DF00BF6DAE /* Stop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4D31AB435DF00BF6DAE /* Stop@3x.png */; };
-		E9A7F4E81AC2FC7900BF6DAE /* MenuButton.001.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4E61AC2FC7900BF6DAE /* MenuButton.001.jpg */; };
-		E9A7F4E91AC2FC7900BF6DAE /* MenuButton.002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4E71AC2FC7900BF6DAE /* MenuButton.002.jpg */; };
+		E9B6FB681ACBCE4A00FCDE59 /* MenuButton.001.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B6FB661ACBCE4A00FCDE59 /* MenuButton.001.png */; };
+		E9B6FB691ACBCE4A00FCDE59 /* MenuButton.002.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B6FB671ACBCE4A00FCDE59 /* MenuButton.002.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,8 +105,8 @@
 		E9A7F4D11AB435DF00BF6DAE /* clock.004003@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.004003@3x.png"; sourceTree = SOURCE_ROOT; };
 		E9A7F4D21AB435DF00BF6DAE /* Stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stop@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9A7F4D31AB435DF00BF6DAE /* Stop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stop@3x.png"; sourceTree = SOURCE_ROOT; };
-		E9A7F4E61AC2FC7900BF6DAE /* MenuButton.001.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MenuButton.001.jpg; sourceTree = SOURCE_ROOT; };
-		E9A7F4E71AC2FC7900BF6DAE /* MenuButton.002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MenuButton.002.jpg; sourceTree = SOURCE_ROOT; };
+		E9B6FB661ACBCE4A00FCDE59 /* MenuButton.001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.001.png; sourceTree = SOURCE_ROOT; };
+		E9B6FB671ACBCE4A00FCDE59 /* MenuButton.002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.002.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,8 +167,8 @@
 		E9A7F4271AA6880100BF6DAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9A7F4E61AC2FC7900BF6DAE /* MenuButton.001.jpg */,
-				E9A7F4E71AC2FC7900BF6DAE /* MenuButton.002.jpg */,
+				E9B6FB661ACBCE4A00FCDE59 /* MenuButton.001.png */,
+				E9B6FB671ACBCE4A00FCDE59 /* MenuButton.002.png */,
 				E9A7F4C21AB435DF00BF6DAE /* Background@2x.png */,
 				E9A7F4C31AB435DF00BF6DAE /* Background@3x.png */,
 				E9A7F4C41AB435DF00BF6DAE /* clock_base@2x.png */,
@@ -307,9 +307,8 @@
 				E9A7F4E41AB435DF00BF6DAE /* Stop@2x.png in Resources */,
 				E9A7F4BA1AB3E18A00BF6DAE /* clock.004002.png in Resources */,
 				E9A7F4DD1AB435DF00BF6DAE /* clock.003@3x.png in Resources */,
-				E9A7F4E81AC2FC7900BF6DAE /* MenuButton.001.jpg in Resources */,
+				E9B6FB691ACBCE4A00FCDE59 /* MenuButton.002.png in Resources */,
 				E9A7F4D41AB435DF00BF6DAE /* Background@2x.png in Resources */,
-				E9A7F4E91AC2FC7900BF6DAE /* MenuButton.002.jpg in Resources */,
 				E9A7F4C11AB42FC600BF6DAE /* Background.png in Resources */,
 				E9A7F4331AA6880100BF6DAE /* Main.storyboard in Resources */,
 				E9A7F4BD1AB4052300BF6DAE /* Stop.png in Resources */,
@@ -331,6 +330,7 @@
 				E9A7F49B1AAEDCDF00BF6DAE /* ClockSec_sound.mp3 in Resources */,
 				E9A7F49A1AAEDCDF00BF6DAE /* ClockAlerm_sound.mp3 in Resources */,
 				E9A7F4DF1AB435DF00BF6DAE /* clock.004@3x.png in Resources */,
+				E9B6FB681ACBCE4A00FCDE59 /* MenuButton.001.png in Resources */,
 				E9A7F4E31AB435DF00BF6DAE /* clock.004003@3x.png in Resources */,
 				E9A7F4B31AB031EB00BF6DAE /* clock_base.png in Resources */,
 				E9A7F4D51AB435DF00BF6DAE /* Background@3x.png in Resources */,

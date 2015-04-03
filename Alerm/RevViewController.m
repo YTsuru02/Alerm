@@ -1,15 +1,14 @@
 //
-//  ViewController.m
+//  RevViewController.m
 //  Alerm
 //
-//  Created by 鶴貝康男 on 2015/03/04.
+//  Created by 鶴貝康男 on 2015/04/01.
 //  Copyright (c) 2015年 鶴貝康男. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RevViewController.h"
 
-@interface ViewController ()
-
+@interface RevViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *clock_base;
 @property (weak, nonatomic) IBOutlet UIImageView *clock_hour;
@@ -17,18 +16,21 @@
 @property (weak, nonatomic) IBOutlet UIImageView *clock_sec;
 @property (weak, nonatomic) IBOutlet UIImageView *clock_set;
 
-@property (weak, nonatomic) IBOutlet UISlider *timeSetSlider;
-
-
-@property (weak, nonatomic) IBOutlet UILabel *timeSetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *timeSetButton;
-- (IBAction)timeSetButton:(id)sender;
 - (IBAction)stopButton:(id)sender;
 
 @end
 
-@implementation ViewController{
+@implementation RevViewController{
+//
+//  ViewController.m
+//  Alerm
+//
+//  Created by 鶴貝康男 on 2015/03/04.
+//  Copyright (c) 2015年 鶴貝康男. All rights reserved.
+//
+
+
     NSTimer *timer;
     float setHourAngle;
     AVAudioPlayer *ClockAlerm_sound;
@@ -37,7 +39,7 @@
     float t;
     NSInteger setHour;
 }
-
+    
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -52,7 +54,9 @@
     NSURL *ClockSec_url = [NSURL fileURLWithPath:ClockSec_path];
     ClockSec_sound = [[AVAudioPlayer alloc]initWithContentsOfURL:ClockSec_url error:NULL];//秒針の音
     
-    [self.timeSetSlider addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
+    UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(selRotationGesture:)];
+    
+    [self.view addGestureRecognizer:rotationGesture];
     
 }
 
@@ -78,30 +82,8 @@
     self.clock_sec.transform = CGAffineTransformMakeRotation(secAngle);
     
     if((fabs(setHourAngle - hourAngle)<0.001) && setHourAngle!=0){
-        if((setHour<=12 && hour<=12)||(setHour>=13 && hour>=13)){
             [ClockAlerm_sound play];//アラームの音を鳴らす
-        }
     }//セットした時間で起こる処理
-}
-
-- (void)valueChange:(UISlider*)timeSetSlider{
-    
-    t = self.timeSetSlider.value;
-    setHour = floorf(t);//セットした時間を取得
-    
-    float tDec = t - floorf(t);
-    NSInteger setMin = 60*tDec;//セットした分を取得
-    
-    NSInteger setSec = 1;
-    
-    float setSecAngle = (M_PI*2)/60*setSec;
-    float setMinAngle = (M_PI*2)/60*setMin+setSecAngle/60;
-    setHourAngle = (M_PI*2)/12*setHour+setMinAngle/12;//セットした時間の角度を取得
-    
-    self.clock_set.transform = CGAffineTransformMakeRotation(setHourAngle);//セットした時間だけ針を回転
-    
-    self.timeSetLabel.textColor = [UIColor redColor];
-    self.timeSetLabel.text = [NSString stringWithFormat:@"%02d:%02d:00",setHour,setMin];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -112,4 +94,14 @@
 - (IBAction)stopButton:(id)sender {
     [ClockAlerm_sound stop];
 }
+
+- (void)selRotationGesture:(UIRotationGestureRecognizer*)sender{
+    
+    float rotation = [sender rotation];
+    self.clock_set.transform = CGAffineTransformMakeRotation(rotation);
+    
+    setHourAngle = rotation;
+}
+
+
 @end

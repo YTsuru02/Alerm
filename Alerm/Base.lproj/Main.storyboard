@@ -4,16 +4,65 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rev View Controller-->
         <scene sceneID="PzT-67-RxQ">
             <objects>
-                <viewController id="aHl-75-7Sg" sceneMemberID="viewController">
+                <viewController id="aHl-75-7Sg" customClass="RevViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kG5-vW-Joh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock_base" id="agi-6j-22d">
+                                <rect key="frame" x="6" y="164" width="311" height="299"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.001" id="oLk-vK-idf">
+                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.002" id="JvY-5I-r02">
+                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.003" id="BNr-Sm-GTZ">
+                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.004" id="2Yp-NO-GG8">
+                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F5r-am-JXx">
+                                <rect key="frame" x="95" y="49" width="127" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Stop.png">
+                                    <color key="titleColor" red="1" green="0.082901251859999997" blue="0.09547381898" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.087001100880000001" blue="0.1671519414" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButton:" destination="aHl-75-7Sg" eventType="touchUpInside" id="5Xt-ee-ziB"/>
+                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QkG-TU-I8P"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YsC-U1-3Jq">
+                                <rect key="frame" x="115" y="302" width="87" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OAd-QE-IFL"/>
+                    <connections>
+                        <outlet property="clock_base" destination="agi-6j-22d" id="jRb-OT-Rjf"/>
+                        <outlet property="clock_hour" destination="oLk-vK-idf" id="Wq8-Uy-bX7"/>
+                        <outlet property="clock_min" destination="JvY-5I-r02" id="nEa-Vf-a16"/>
+                        <outlet property="clock_sec" destination="BNr-Sm-GTZ" id="qly-O5-34d"/>
+                        <outlet property="clock_set" destination="2Yp-NO-GG8" id="ZXi-my-8M7"/>
+                        <outlet property="timeLabel" destination="YsC-U1-3Jq" id="BUe-HU-T49"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPE-6R-X09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

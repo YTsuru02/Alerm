@@ -63,7 +63,7 @@
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *components = [cal components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
     
-    NSInteger hour = components.hour%12;//現在の時間の取得
+    NSInteger hour = components.hour;//現在の時間の取得
     NSInteger min = components.minute;//現在の分の取得
     NSInteger sec = components.second;//現在の秒の取得
     
@@ -88,6 +88,15 @@
     
     t = self.timeSetSlider.value;
     setHour = floorf(t);//セットした時間を取得
+    
+    /*if(setHour<=12){
+        self.timeSetSlider.minimumTrackTintColor = [UIColor redColor];
+    }
+    else if(setHour>13){
+        self.timeSetSlider.minimumTrackTintColor = [UIColor blueColor];
+    }*/
+    
+    
     
     float tDec = t - floorf(t);
     NSInteger setMin = 60*tDec;//セットした分を取得

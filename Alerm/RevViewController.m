@@ -67,7 +67,7 @@
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *components = [cal components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
     
-    NSInteger hour = components.hour%12;//現在の時間の取得
+    NSInteger hour = components.hour;//現在の時間の取得
     NSInteger min = components.minute;//現在の分の取得
     NSInteger sec = components.second;//現在の秒の取得
     
@@ -82,7 +82,9 @@
     self.clock_sec.transform = CGAffineTransformMakeRotation(secAngle);
     
     if((fabs(setHourAngle - hourAngle)<0.001) && setHourAngle!=0){
+        if((setHour<=12 && hour<=12)||(setHour>=13 && hour>=13)){
             [ClockAlerm_sound play];//アラームの音を鳴らす
+        }
     }//セットした時間で起こる処理
 }
 

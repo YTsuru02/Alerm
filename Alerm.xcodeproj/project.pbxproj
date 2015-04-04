@@ -23,8 +23,6 @@
 		E9A7F4B51AB031EB00BF6DAE /* clock.002.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4B01AB031EA00BF6DAE /* clock.002.png */; };
 		E9A7F4B61AB031EB00BF6DAE /* clock.003.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4B11AB031EA00BF6DAE /* clock.003.png */; };
 		E9A7F4B71AB031EB00BF6DAE /* clock.004.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4B21AB031EB00BF6DAE /* clock.004.png */; };
-		E9A7F4BA1AB3E18A00BF6DAE /* clock.004002.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4B81AB3E18A00BF6DAE /* clock.004002.png */; };
-		E9A7F4BB1AB3E18A00BF6DAE /* clock.004003.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4B91AB3E18A00BF6DAE /* clock.004003.png */; };
 		E9A7F4BD1AB4052300BF6DAE /* Stop.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4BC1AB4052300BF6DAE /* Stop.png */; };
 		E9A7F4C11AB42FC600BF6DAE /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4C01AB42FC600BF6DAE /* Background.png */; };
 		E9A7F4D41AB435DF00BF6DAE /* Background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4C21AB435DF00BF6DAE /* Background@2x.png */; };
@@ -39,15 +37,10 @@
 		E9A7F4DD1AB435DF00BF6DAE /* clock.003@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4CB1AB435DF00BF6DAE /* clock.003@3x.png */; };
 		E9A7F4DE1AB435DF00BF6DAE /* clock.004@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4CC1AB435DF00BF6DAE /* clock.004@2x.png */; };
 		E9A7F4DF1AB435DF00BF6DAE /* clock.004@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4CD1AB435DF00BF6DAE /* clock.004@3x.png */; };
-		E9A7F4E01AB435DF00BF6DAE /* clock.004002@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4CE1AB435DF00BF6DAE /* clock.004002@2x.png */; };
-		E9A7F4E11AB435DF00BF6DAE /* clock.004002@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4CF1AB435DF00BF6DAE /* clock.004002@3x.png */; };
-		E9A7F4E21AB435DF00BF6DAE /* clock.004003@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4D01AB435DF00BF6DAE /* clock.004003@2x.png */; };
-		E9A7F4E31AB435DF00BF6DAE /* clock.004003@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4D11AB435DF00BF6DAE /* clock.004003@3x.png */; };
 		E9A7F4E41AB435DF00BF6DAE /* Stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4D21AB435DF00BF6DAE /* Stop@2x.png */; };
 		E9A7F4E51AB435DF00BF6DAE /* Stop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A7F4D31AB435DF00BF6DAE /* Stop@3x.png */; };
-		E9B6FB681ACBCE4A00FCDE59 /* MenuButton.001.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B6FB661ACBCE4A00FCDE59 /* MenuButton.001.png */; };
-		E9B6FB691ACBCE4A00FCDE59 /* MenuButton.002.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B6FB671ACBCE4A00FCDE59 /* MenuButton.002.png */; };
 		E9B6FB6C1ACBCF3500FCDE59 /* RevViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B6FB6B1ACBCF3500FCDE59 /* RevViewController.m */; };
+		E9B6FB6E1ACEF4BC00FCDE59 /* MenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E9B6FB6D1ACEF4BC00FCDE59 /* MenuButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +77,6 @@
 		E9A7F4B01AB031EA00BF6DAE /* clock.002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.002.png; sourceTree = SOURCE_ROOT; };
 		E9A7F4B11AB031EA00BF6DAE /* clock.003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.003.png; sourceTree = SOURCE_ROOT; };
 		E9A7F4B21AB031EB00BF6DAE /* clock.004.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.004.png; sourceTree = SOURCE_ROOT; };
-		E9A7F4B81AB3E18A00BF6DAE /* clock.004002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.004002.png; sourceTree = SOURCE_ROOT; };
-		E9A7F4B91AB3E18A00BF6DAE /* clock.004003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.004003.png; sourceTree = SOURCE_ROOT; };
 		E9A7F4BC1AB4052300BF6DAE /* Stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stop.png; sourceTree = SOURCE_ROOT; };
 		E9A7F4C01AB42FC600BF6DAE /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = SOURCE_ROOT; };
 		E9A7F4C21AB435DF00BF6DAE /* Background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background@2x.png"; sourceTree = SOURCE_ROOT; };
@@ -100,16 +91,11 @@
 		E9A7F4CB1AB435DF00BF6DAE /* clock.003@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.003@3x.png"; sourceTree = SOURCE_ROOT; };
 		E9A7F4CC1AB435DF00BF6DAE /* clock.004@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.004@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9A7F4CD1AB435DF00BF6DAE /* clock.004@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.004@3x.png"; sourceTree = SOURCE_ROOT; };
-		E9A7F4CE1AB435DF00BF6DAE /* clock.004002@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.004002@2x.png"; sourceTree = SOURCE_ROOT; };
-		E9A7F4CF1AB435DF00BF6DAE /* clock.004002@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.004002@3x.png"; sourceTree = SOURCE_ROOT; };
-		E9A7F4D01AB435DF00BF6DAE /* clock.004003@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.004003@2x.png"; sourceTree = SOURCE_ROOT; };
-		E9A7F4D11AB435DF00BF6DAE /* clock.004003@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock.004003@3x.png"; sourceTree = SOURCE_ROOT; };
 		E9A7F4D21AB435DF00BF6DAE /* Stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stop@2x.png"; sourceTree = SOURCE_ROOT; };
 		E9A7F4D31AB435DF00BF6DAE /* Stop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stop@3x.png"; sourceTree = SOURCE_ROOT; };
-		E9B6FB661ACBCE4A00FCDE59 /* MenuButton.001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.001.png; sourceTree = SOURCE_ROOT; };
-		E9B6FB671ACBCE4A00FCDE59 /* MenuButton.002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.002.png; sourceTree = SOURCE_ROOT; };
 		E9B6FB6A1ACBCF3500FCDE59 /* RevViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevViewController.h; sourceTree = "<group>"; };
 		E9B6FB6B1ACBCF3500FCDE59 /* RevViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevViewController.m; sourceTree = "<group>"; };
+		E9B6FB6D1ACEF4BC00FCDE59 /* MenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +158,7 @@
 		E9A7F4271AA6880100BF6DAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E9B6FB661ACBCE4A00FCDE59 /* MenuButton.001.png */,
-				E9B6FB671ACBCE4A00FCDE59 /* MenuButton.002.png */,
+				E9B6FB6D1ACEF4BC00FCDE59 /* MenuButton.png */,
 				E9A7F4C21AB435DF00BF6DAE /* Background@2x.png */,
 				E9A7F4C31AB435DF00BF6DAE /* Background@3x.png */,
 				E9A7F4C41AB435DF00BF6DAE /* clock_base@2x.png */,
@@ -186,16 +171,10 @@
 				E9A7F4CB1AB435DF00BF6DAE /* clock.003@3x.png */,
 				E9A7F4CC1AB435DF00BF6DAE /* clock.004@2x.png */,
 				E9A7F4CD1AB435DF00BF6DAE /* clock.004@3x.png */,
-				E9A7F4CE1AB435DF00BF6DAE /* clock.004002@2x.png */,
-				E9A7F4CF1AB435DF00BF6DAE /* clock.004002@3x.png */,
-				E9A7F4D01AB435DF00BF6DAE /* clock.004003@2x.png */,
-				E9A7F4D11AB435DF00BF6DAE /* clock.004003@3x.png */,
 				E9A7F4D21AB435DF00BF6DAE /* Stop@2x.png */,
 				E9A7F4D31AB435DF00BF6DAE /* Stop@3x.png */,
 				E9A7F4C01AB42FC600BF6DAE /* Background.png */,
 				E9A7F4BC1AB4052300BF6DAE /* Stop.png */,
-				E9A7F4B81AB3E18A00BF6DAE /* clock.004002.png */,
-				E9A7F4B91AB3E18A00BF6DAE /* clock.004003.png */,
 				E9A7F4AE1AB031EA00BF6DAE /* clock_base.png */,
 				E9A7F4AF1AB031EA00BF6DAE /* clock.001.png */,
 				E9A7F4B01AB031EA00BF6DAE /* clock.002.png */,
@@ -307,12 +286,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9A7F4B71AB031EB00BF6DAE /* clock.004.png in Resources */,
-				E9A7F4E01AB435DF00BF6DAE /* clock.004002@2x.png in Resources */,
 				E9A7F4B41AB031EB00BF6DAE /* clock.001.png in Resources */,
 				E9A7F4E41AB435DF00BF6DAE /* Stop@2x.png in Resources */,
-				E9A7F4BA1AB3E18A00BF6DAE /* clock.004002.png in Resources */,
 				E9A7F4DD1AB435DF00BF6DAE /* clock.003@3x.png in Resources */,
-				E9B6FB691ACBCE4A00FCDE59 /* MenuButton.002.png in Resources */,
 				E9A7F4D41AB435DF00BF6DAE /* Background@2x.png in Resources */,
 				E9A7F4C11AB42FC600BF6DAE /* Background.png in Resources */,
 				E9A7F4331AA6880100BF6DAE /* Main.storyboard in Resources */,
@@ -321,8 +297,8 @@
 				E9A7F4D81AB435DF00BF6DAE /* clock.001@2x.png in Resources */,
 				E9A7F4381AA6880100BF6DAE /* LaunchScreen.xib in Resources */,
 				E9A7F4DB1AB435DF00BF6DAE /* clock.002@3x.png in Resources */,
-				E9A7F4E21AB435DF00BF6DAE /* clock.004003@2x.png in Resources */,
 				E9A7F4E51AB435DF00BF6DAE /* Stop@3x.png in Resources */,
+				E9B6FB6E1ACEF4BC00FCDE59 /* MenuButton.png in Resources */,
 				E9A7F4D61AB435DF00BF6DAE /* clock_base@2x.png in Resources */,
 				E9A7F4351AA6880100BF6DAE /* Images.xcassets in Resources */,
 				E9A7F4B51AB031EB00BF6DAE /* clock.002.png in Resources */,
@@ -330,13 +306,9 @@
 				E9A7F4DE1AB435DF00BF6DAE /* clock.004@2x.png in Resources */,
 				E9A7F4D91AB435DF00BF6DAE /* clock.001@3x.png in Resources */,
 				E9A7F4B61AB031EB00BF6DAE /* clock.003.png in Resources */,
-				E9A7F4BB1AB3E18A00BF6DAE /* clock.004003.png in Resources */,
-				E9A7F4E11AB435DF00BF6DAE /* clock.004002@3x.png in Resources */,
 				E9A7F49B1AAEDCDF00BF6DAE /* ClockSec_sound.mp3 in Resources */,
 				E9A7F49A1AAEDCDF00BF6DAE /* ClockAlerm_sound.mp3 in Resources */,
 				E9A7F4DF1AB435DF00BF6DAE /* clock.004@3x.png in Resources */,
-				E9B6FB681ACBCE4A00FCDE59 /* MenuButton.001.png in Resources */,
-				E9A7F4E31AB435DF00BF6DAE /* clock.004003@3x.png in Resources */,
 				E9A7F4B31AB031EB00BF6DAE /* clock_base.png in Resources */,
 				E9A7F4D51AB435DF00BF6DAE /* Background@3x.png in Resources */,
 				E9A7F4DC1AB435DF00BF6DAE /* clock.003@2x.png in Resources */,

@@ -154,6 +154,10 @@
                                 <rect key="frame" x="3" y="169" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.005.png" id="ooV-xi-g86">
+                                <rect key="frame" x="3" y="162" width="311" height="299"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="caT-Ll-Uba">
                                 <rect key="frame" x="95" y="47" width="127" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -179,7 +183,8 @@
                         <outlet property="clock_hour" destination="lDJ-8D-0dR" id="lEM-do-ri7"/>
                         <outlet property="clock_min" destination="niE-YX-huQ" id="cb4-SF-KhO"/>
                         <outlet property="clock_sec" destination="UQJ-qb-gd3" id="Dzq-NR-Tjw"/>
-                        <outlet property="clock_set" destination="e8k-xJ-ZK0" id="NTU-QO-N8r"/>
+                        <outlet property="clock_setAM" destination="e8k-xJ-ZK0" id="74w-GH-Tag"/>
+                        <outlet property="clock_setPM" destination="ooV-xi-g86" id="Ror-Kh-lHD"/>
                         <outlet property="timeLabel" destination="XJN-02-L7c" id="70u-uc-OAo"/>
                         <outlet property="timeSetLabel" destination="lWd-oi-a7d" id="lqV-sQ-TAU"/>
                         <outlet property="timeSetSlider" destination="xAb-9z-xUN" id="KZd-XL-cab"/>
@@ -215,6 +220,7 @@
         <image name="clock.002" width="311" height="299"/>
         <image name="clock.003" width="311" height="299"/>
         <image name="clock.004" width="311" height="299"/>
+        <image name="clock.005.png" width="311" height="299"/>
         <image name="clock_base" width="311" height="299"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

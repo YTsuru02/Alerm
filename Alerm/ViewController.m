@@ -15,7 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *clock_hour;
 @property (weak, nonatomic) IBOutlet UIImageView *clock_min;
 @property (weak, nonatomic) IBOutlet UIImageView *clock_sec;
-@property (weak, nonatomic) IBOutlet UIImageView *clock_set;
+@property (weak, nonatomic) IBOutlet UIImageView *clock_setAM;
+@property (weak, nonatomic) IBOutlet UIImageView *clock_setPM;
 
 @property (weak, nonatomic) IBOutlet UISlider *timeSetSlider;
 
@@ -41,6 +42,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.clock_setAM.alpha = 0;
+    self.clock_setPM.alpha = 0;
     
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeProc:) userInfo:nil repeats:YES];
     
@@ -89,13 +93,6 @@
     t = self.timeSetSlider.value;
     setHour = floorf(t);//セットした時間を取得
     
-    /*if(setHour<=12){
-        self.timeSetSlider.minimumTrackTintColor = [UIColor redColor];
-    }
-    else if(setHour>13){
-        self.timeSetSlider.minimumTrackTintColor = [UIColor blueColor];
-    }*/
-    
     
     
     float tDec = t - floorf(t);
@@ -107,9 +104,27 @@
     float setMinAngle = (M_PI*2)/60*setMin+setSecAngle/60;
     setHourAngle = (M_PI*2)/12*setHour+setMinAngle/12;//セットした時間の角度を取得
     
-    self.clock_set.transform = CGAffineTransformMakeRotation(setHourAngle);//セットした時間だけ針を回転
+    if(setHour<12){
+        self.timeSetSlider.minimumTrackTintColor = [UIColor redColor];
+        
+        self.clock_setAM.alpha = 1;
+        self.clock_setPM.alpha = 0;
+        
+        self.clock_setAM.transform = CGAffineTransformMakeRotation(setHourAngle);//セットした時間だけ針を回転
+        self.timeSetLabel.textColor = [UIColor redColor];
+    }
+    else if(setHour>=12){
+
+        self.timeSetSlider.minimumTrackTintColor = [UIColor blueColor];
+        
+        self.clock_setAM.alpha = 0;
+        self.clock_setPM.alpha = 1;
+        
+        self.clock_setPM.transform = CGAffineTransformMakeRotation(setHourAngle);//セットした時間だけ針を回転
+        self.timeSetLabel.textColor = [UIColor blueColor];
+    }
+
     
-    self.timeSetLabel.textColor = [UIColor redColor];
     self.timeSetLabel.text = [NSString stringWithFormat:@"%02d:%02d:00",setHour,setMin];
 }
 

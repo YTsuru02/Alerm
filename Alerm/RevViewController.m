@@ -17,7 +17,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *clock_set;
 
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-- (IBAction)stopButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton_Push;
+- (IBAction)stopButton_Push:(id)sender;
 
 @end
 
@@ -30,29 +31,25 @@
 //  Copyright (c) 2015年 鶴貝康男. All rights reserved.
 //
 
-
     NSTimer *timer;
     float setHourAngle;
     AVAudioPlayer *ClockAlerm_sound;
-    AVAudioPlayer *ClockSec_sound;
     int timeSetCounter;
     float t;
     NSInteger setHour;
+    int counter;
 }
     
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timeProc:) userInfo:nil repeats:YES];
     
     NSString *ClockAlerm_path = [[NSBundle mainBundle]pathForResource:@"ClockAlerm_sound" ofType:@"mp3"];
     NSURL *ClockAlerm_url = [NSURL fileURLWithPath:ClockAlerm_path];
     ClockAlerm_sound = [[AVAudioPlayer alloc]initWithContentsOfURL:ClockAlerm_url error:NULL];//アラームの音
-    
-    NSString *ClockSec_path = [[NSBundle mainBundle]pathForResource:@"ClockSec_sound" ofType:@"mp3"];
-    NSURL *ClockSec_url = [NSURL fileURLWithPath:ClockSec_path];
-    ClockSec_sound = [[AVAudioPlayer alloc]initWithContentsOfURL:ClockSec_url error:NULL];//秒針の音
     
     UIRotationGestureRecognizer *rotationGesture = [[UIRotationGestureRecognizer alloc]initWithTarget:self action:@selector(selRotationGesture:)];
     
@@ -61,7 +58,6 @@
 }
 
 - (void)timeProc:(NSTimer*)timer{
-    [ClockSec_sound play];//秒針の音を鳴らす
     
     NSDate *date = [NSDate date];
     NSCalendar *cal = [NSCalendar currentCalendar];
@@ -93,17 +89,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)stopButton:(id)sender {
+- (IBAction)stopButton_Push:(id)sender {
     [ClockAlerm_sound stop];
+    [self.stopButton_Push setImage:[UIImage imageNamed:@"StopButton_Set.png"] forState:UIControlStateNormal];
 }
 
 - (void)selRotationGesture:(UIRotationGestureRecognizer*)sender{
+    
+    [self.stopButton_Push setImage:[UIImage imageNamed:@"StopButton_Push.png"] forState:UIControlStateNormal];
     
     float rotation = [sender rotation];
     self.clock_set.transform = CGAffineTransformMakeRotation(rotation);
     
     setHourAngle = rotation;
 }
-
 
 @end

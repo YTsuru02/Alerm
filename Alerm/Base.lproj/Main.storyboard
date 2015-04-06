@@ -13,44 +13,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock_base" id="agi-6j-22d">
-                                <rect key="frame" x="6" y="164" width="311" height="299"/>
+                                <rect key="frame" x="8" y="164" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.001" id="oLk-vK-idf">
-                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <rect key="frame" x="5" y="164" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.002" id="JvY-5I-r02">
-                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <rect key="frame" x="5" y="164" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.003" id="BNr-Sm-GTZ">
-                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <rect key="frame" x="5" y="164" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="clock.004" id="2Yp-NO-GG8">
-                                <rect key="frame" x="3" y="164" width="311" height="299"/>
+                                <rect key="frame" x="5" y="164" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F5r-am-JXx">
-                                <rect key="frame" x="95" y="49" width="127" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Stop.png">
-                                    <color key="titleColor" red="1" green="0.082901251859999997" blue="0.09547381898" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.087001100880000001" blue="0.1671519414" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopButton:" destination="aHl-75-7Sg" eventType="touchUpInside" id="5Xt-ee-ziB"/>
-                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QkG-TU-I8P"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YsC-U1-3Jq">
-                                <rect key="frame" x="115" y="302" width="87" height="24"/>
+                                <rect key="frame" x="117" y="302" width="87" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="upS-NU-u4g">
+                                <rect key="frame" x="70" y="67" width="180" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="stopButton_Push.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButton_Push:" destination="aHl-75-7Sg" eventType="touchUpInside" id="prH-n5-vsj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -61,6 +59,7 @@
                         <outlet property="clock_min" destination="JvY-5I-r02" id="nEa-Vf-a16"/>
                         <outlet property="clock_sec" destination="BNr-Sm-GTZ" id="qly-O5-34d"/>
                         <outlet property="clock_set" destination="2Yp-NO-GG8" id="ZXi-my-8M7"/>
+                        <outlet property="stopButton_Push" destination="upS-NU-u4g" id="WFO-mx-ngv"/>
                         <outlet property="timeLabel" destination="YsC-U1-3Jq" id="BUe-HU-T49"/>
                     </connections>
                 </viewController>
@@ -158,22 +157,21 @@
                                 <rect key="frame" x="3" y="162" width="311" height="299"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="caT-Ll-Uba">
-                                <rect key="frame" x="95" y="47" width="127" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Stop.png">
-                                    <color key="titleColor" red="1" green="0.082901251859999997" blue="0.09547381898" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.087001100880000001" blue="0.1671519414" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUc-7A-7Oq"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="24" id="xAb-9z-xUN">
                                 <rect key="frame" x="4" y="456" width="312" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="1" green="0.082901251859999997" blue="0.09547381898" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dKq-Pm-dtn">
+                                <rect key="frame" x="68" y="69" width="180" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="stopButton_Push.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopButton_Push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G6M-yk-9Iz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -185,6 +183,7 @@
                         <outlet property="clock_sec" destination="UQJ-qb-gd3" id="Dzq-NR-Tjw"/>
                         <outlet property="clock_setAM" destination="e8k-xJ-ZK0" id="74w-GH-Tag"/>
                         <outlet property="clock_setPM" destination="ooV-xi-g86" id="Ror-Kh-lHD"/>
+                        <outlet property="stopButton_Push" destination="dKq-Pm-dtn" id="9av-vy-XYF"/>
                         <outlet property="timeLabel" destination="XJN-02-L7c" id="70u-uc-OAo"/>
                         <outlet property="timeSetLabel" destination="lWd-oi-a7d" id="lqV-sQ-TAU"/>
                         <outlet property="timeSetSlider" destination="xAb-9z-xUN" id="KZd-XL-cab"/>
@@ -215,13 +214,13 @@
     </scenes>
     <resources>
         <image name="MenuButton" width="315" height="236"/>
-        <image name="Stop.png" width="240" height="180"/>
         <image name="clock.001" width="311" height="299"/>
         <image name="clock.002" width="311" height="299"/>
         <image name="clock.003" width="311" height="299"/>
         <image name="clock.004" width="311" height="299"/>
         <image name="clock.005.png" width="311" height="299"/>
         <image name="clock_base" width="311" height="299"/>
+        <image name="stopButton_Push.png" width="180" height="135"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

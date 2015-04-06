@@ -23,9 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timeSetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
-@property (weak, nonatomic) IBOutlet UIButton *timeSetButton;
-- (IBAction)timeSetButton:(id)sender;
-- (IBAction)stopButton:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *stopButton_Push;
+- (IBAction)stopButton_Push:(id)sender;
+
 
 @end
 
@@ -33,7 +33,6 @@
     NSTimer *timer;
     float setHourAngle;
     AVAudioPlayer *ClockAlerm_sound;
-    AVAudioPlayer *ClockSec_sound;
     int timeSetCounter;
     float t;
     NSInteger setHour;
@@ -52,16 +51,11 @@
     NSURL *ClockAlerm_url = [NSURL fileURLWithPath:ClockAlerm_path];
     ClockAlerm_sound = [[AVAudioPlayer alloc]initWithContentsOfURL:ClockAlerm_url error:NULL];//アラームの音
     
-    NSString *ClockSec_path = [[NSBundle mainBundle]pathForResource:@"ClockSec_sound" ofType:@"mp3"];
-    NSURL *ClockSec_url = [NSURL fileURLWithPath:ClockSec_path];
-    ClockSec_sound = [[AVAudioPlayer alloc]initWithContentsOfURL:ClockSec_url error:NULL];//秒針の音
-    
     [self.timeSetSlider addTarget:self action:@selector(valueChange:) forControlEvents:UIControlEventValueChanged];
     
 }
 
 - (void)timeProc:(NSTimer*)timer{
-    [ClockSec_sound play];//秒針の音を鳴らす
     
     NSDate *date = [NSDate date];
     NSCalendar *cal = [NSCalendar currentCalendar];
@@ -90,10 +84,10 @@
 
 - (void)valueChange:(UISlider*)timeSetSlider{
     
+    [self.stopButton_Push setImage:[UIImage imageNamed:@"StopButton_Push.png"] forState:UIControlStateNormal];
+    
     t = self.timeSetSlider.value;
     setHour = floorf(t);//セットした時間を取得
-    
-    
     
     float tDec = t - floorf(t);
     NSInteger setMin = 60*tDec;//セットした分を取得
@@ -133,7 +127,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)stopButton:(id)sender {
+
+- (IBAction)stopButton_Push:(id)sender {
     [ClockAlerm_sound stop];
+
+    [self.stopButton_Push setImage:[UIImage imageNamed:@"StopButton_Set.png"] forState:UIControlStateNormal];
+    
+    //UIImage *img = [UIImage imageNamed:@"StopButton_Set.png"];
+    //self.stopButton_Push.imageView = img;
+    
 }
 @end

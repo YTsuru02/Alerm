@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Angle.h"
+#import "Time.h"
 
 @interface ViewController ()
 
@@ -20,7 +22,6 @@
 
 @property (weak, nonatomic) IBOutlet UISlider *timeSetSlider;
 
-
 @property (weak, nonatomic) IBOutlet UILabel *timeSetLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *stopButton_Push;
@@ -31,11 +32,13 @@
 
 @implementation ViewController{
     NSTimer *timer;
-    float setHourAngle;
     AVAudioPlayer *ClockAlerm_sound;
     int timeSetCounter;
     float t;
-    NSInteger setHour;
+    Angle *nowAngle;
+    Angle *setAngle;
+    Time *nowTime;
+    Time *setTime;
 }
 
 - (void)viewDidLoad {
@@ -61,22 +64,29 @@
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDateComponents *components = [cal components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
     
-    NSInteger hour = components.hour;//現在の時間の取得
-    NSInteger min = components.minute;//現在の分の取得
-    NSInteger sec = components.second;//現在の秒の取得
+    nowTime = [[Time alloc] init];
+    nowTime.hour = components.hour;//現在の時間の取得
+    nowTime.min = components.minute;//現在の分の取得
+    nowTime.sec = components.second;//現在の秒の取得
     
-    self.timeLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d",hour,min,sec];
+    self.timeLabel.text = [NSString stringWithFormat:@"%02d:%02d:%02d",nowTime.hour,nowTime.min,nowTime.sec];
     
-    float secAngle = (M_PI*2)/60*sec;//現在の時間の角度を取得
-    float minAngle = (M_PI*2)/60*min+secAngle/60;//現在の分の角度を取得
-    float hourAngle = (M_PI*2)/12*hour+minAngle/12;//現在の秒の角度を取得
+    //float secAngle = (M_PI*2)/60*sec;//現在の時間の角度を取得
     
-    self.clock_hour.transform = CGAffineTransformMakeRotation(hourAngle);
-    self.clock_min.transform = CGAffineTransformMakeRotation(minAngle);
-    self.clock_sec.transform = CGAffineTransformMakeRotation(secAngle);
     
-    if((fabs(setHourAngle - hourAngle)<0.001) && setHourAngle!=0){
-        if((setHour<=12 && hour<=12)||(setHour>=13 && hour>=13)){
+    nowAngle = [[Angle alloc] init];
+    
+    nowAngle.sec = (M_PI*2)/60*nowTime.sec;
+    nowAngle.min = (M_PI*2)/60*nowTime.min+nowAngle.sec/60;//現在の分の角度を取得
+    nowAngle.hour = (M_PI*2)/12*nowTime.hour+nowAngle.min/12;//現在の秒の角度を取得
+
+    
+    self.clock_hour.transform = CGAffineTransformMakeRotation(nowAngle.hour);
+    self.clock_min.transform = CGAffineTransformMakeRotation(nowAngle.min);
+    self.clock_sec.transform = CGAffineTransformMakeRotation(nowAngle.sec);
+    
+    if((fabs(setAngle.hour - nowAngle.hour)<0.001) && setAngle.hour!=0){
+        if((setTime.hour<=12 && nowTime.hour<=12)||(setTime.hour>=13 && nowTime.hour>=13)){
             [ClockAlerm_sound play];//アラームの音を鳴らす
         }
     }//セットした時間で起こる処理
@@ -87,39 +97,42 @@
     [self.stopButton_Push setImage:[UIImage imageNamed:@"StopButton_Push.png"] forState:UIControlStateNormal];
     
     t = self.timeSetSlider.value;
-    setHour = floorf(t);//セットした時間を取得
+    
+    setTime = [[Time alloc] init];
+    setTime.hour = floorf(t);//セットした時間を取得
     
     float tDec = t - floorf(t);
-    NSInteger setMin = 60*tDec;//セットした分を取得
+    setTime.min = 60*tDec;//セットした分を取得
+    setTime.sec = 1;
     
-    NSInteger setSec = 1;
     
-    float setSecAngle = (M_PI*2)/60*setSec;
-    float setMinAngle = (M_PI*2)/60*setMin+setSecAngle/60;
-    setHourAngle = (M_PI*2)/12*setHour+setMinAngle/12;//セットした時間の角度を取得
+    setAngle = [[Angle alloc] init];
+    setAngle.sec = (M_PI*2)/60*setTime.sec;
+    setAngle.min = (M_PI*2)/60*setTime.min+setAngle.sec/60;
+    setAngle.hour = (M_PI*2)/12*setTime.hour+setAngle.min/12;//セットした時間の角度を取得
     
-    if(setHour<12){
+    if(setTime.hour<12){
         self.timeSetSlider.minimumTrackTintColor = [UIColor redColor];
         
         self.clock_setAM.alpha = 1;
         self.clock_setPM.alpha = 0;
         
-        self.clock_setAM.transform = CGAffineTransformMakeRotation(setHourAngle);//セットした時間だけ針を回転
+        self.clock_setAM.transform = CGAffineTransformMakeRotation(setAngle.hour);//セットした時間だけ針を回転
         self.timeSetLabel.textColor = [UIColor redColor];
     }
-    else if(setHour>=12){
+    else if(setTime.hour>=12){
 
         self.timeSetSlider.minimumTrackTintColor = [UIColor blueColor];
         
         self.clock_setAM.alpha = 0;
         self.clock_setPM.alpha = 1;
         
-        self.clock_setPM.transform = CGAffineTransformMakeRotation(setHourAngle);//セットした時間だけ針を回転
+        self.clock_setPM.transform = CGAffineTransformMakeRotation(setAngle.hour);//セットした時間だけ針を回転
         self.timeSetLabel.textColor = [UIColor blueColor];
     }
 
     
-    self.timeSetLabel.text = [NSString stringWithFormat:@"%02d:%02d:00",setHour,setMin];
+    self.timeSetLabel.text = [NSString stringWithFormat:@"%02d:%02d:00",setTime.hour,setTime.min];
 }
 
 - (void)didReceiveMemoryWarning {

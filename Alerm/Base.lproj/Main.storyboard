@@ -49,6 +49,16 @@
                                     <action selector="stopButton_Push:" destination="aHl-75-7Sg" eventType="touchUpInside" id="prH-n5-vsj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s0L-tg-wlU">
+                                <rect key="frame" x="213" y="518" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Past-Data→">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MSy-pe-AoY" kind="push" id="qpd-px-sLh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -67,6 +77,33 @@
             </objects>
             <point key="canvasLocation" x="2021" y="-806"/>
         </scene>
+        <!--Rev Past Data View Controller-->
+        <scene sceneID="Pu1-ev-9Sq">
+            <objects>
+                <viewController id="MSy-pe-AoY" customClass="Rev_PastDataViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RbD-7L-62y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oXq-H8-Eta">
+                                <rect key="frame" x="16" y="77" width="288" height="476"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wY4-Yu-FGZ"/>
+                    <connections>
+                        <outlet property="pastDataLabel" destination="oXq-H8-Eta" id="XWY-1q-Srk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxA-pe-5hc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="-806"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="9bZ-wH-my6">
             <objects>
@@ -82,24 +119,26 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JqI-js-qXb">
-                                <rect key="frame" x="80" y="395" width="160" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="krG-Ra-XBE">
+                                <rect key="frame" x="112" y="299" width="96" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Slider" backgroundImage="MenuButton">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Gesture" backgroundImage="MenuButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="push" id="Rme-SH-EQk"/>
+                                    <segue destination="aHl-75-7Sg" kind="push" id="byJ-W7-fQa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qX7-Rp-Mfl">
-                                <rect key="frame" x="80" y="251" width="160" height="120"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IFn-4j-FIN">
+                                <rect key="frame" x="112" y="399" width="96" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Gesture" backgroundImage="MenuButton">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Slider" backgroundImage="MenuButton.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aHl-75-7Sg" kind="push" id="epQ-bF-M2h"/>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="wgY-ng-rcZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,6 +211,16 @@
                                     <action selector="stopButton_Push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G6M-yk-9Iz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P5Y-NW-oBE">
+                                <rect key="frame" x="226" y="513" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Past-Data→">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Q63-Kn-Kp8" kind="push" id="elo-Np-s31"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -193,6 +242,33 @@
             </objects>
             <point key="canvasLocation" x="2021" y="-97"/>
         </scene>
+        <!--Slider Past Data View Controller-->
+        <scene sceneID="BRp-wW-DpZ">
+            <objects>
+                <viewController id="Q63-Kn-Kp8" customClass="Slider_PastDataViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbN-qw-xwt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRb-y2-XQ8">
+                                <rect key="frame" x="16" y="82" width="288" height="476"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GAc-Ir-ifg"/>
+                    <connections>
+                        <outlet property="pastDataLabel" destination="HRb-y2-XQ8" id="5he-B0-ike"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2L1-AY-Rvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2373" y="-97"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="N8h-F8-UKk">
             <objects>
@@ -213,7 +289,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MenuButton" width="315" height="236"/>
+        <image name="MenuButton.png" width="315" height="236"/>
         <image name="clock.001" width="311" height="299"/>
         <image name="clock.002" width="311" height="299"/>
         <image name="clock.003" width="311" height="299"/>

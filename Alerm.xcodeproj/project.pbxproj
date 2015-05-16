@@ -49,6 +49,7 @@
 		E9B6FB801AE1E0F700FCDE59 /* Slider_PastDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B6FB7F1AE1E0F700FCDE59 /* Slider_PastDataViewController.m */; };
 		E9B6FB831AE4D79C00FCDE59 /* Time.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B6FB821AE4D79C00FCDE59 /* Time.m */; };
 		E9B6FB861AE4D92000FCDE59 /* Angle.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B6FB851AE4D92000FCDE59 /* Angle.m */; };
+		E9D170691B048C68003300FE /* PastData.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D170681B048C68003300FE /* PastData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,8 @@
 		E9B6FB821AE4D79C00FCDE59 /* Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Time.m; sourceTree = "<group>"; };
 		E9B6FB841AE4D92000FCDE59 /* Angle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Angle.h; sourceTree = "<group>"; };
 		E9B6FB851AE4D92000FCDE59 /* Angle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Angle.m; sourceTree = "<group>"; };
+		E9D170671B048C68003300FE /* PastData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastData.h; sourceTree = "<group>"; };
+		E9D170681B048C68003300FE /* PastData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +179,8 @@
 				E9A7F4341AA6880100BF6DAE /* Images.xcassets */,
 				E9A7F4361AA6880100BF6DAE /* LaunchScreen.xib */,
 				E9A7F4271AA6880100BF6DAE /* Supporting Files */,
+				E9D170671B048C68003300FE /* PastData.h */,
+				E9D170681B048C68003300FE /* PastData.m */,
 			);
 			path = Alerm;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 				E9B6FB7D1AE1E08B00FCDE59 /* Rev_PastDataViewController.m in Sources */,
 				E9B6FB831AE4D79C00FCDE59 /* Time.m in Sources */,
 				E9A7F4301AA6880100BF6DAE /* ViewController.m in Sources */,
+				E9D170691B048C68003300FE /* PastData.m in Sources */,
 				E9A7F42D1AA6880100BF6DAE /* AppDelegate.m in Sources */,
 				E9A7F42A1AA6880100BF6DAE /* main.m in Sources */,
 			);

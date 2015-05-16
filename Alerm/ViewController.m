@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *stopButton_Push;
 - (IBAction)stopButton_Push:(id)sender;
 
+- (IBAction)submitButton:(id)sender;
 
 @end
 
@@ -148,6 +149,43 @@
     
     //UIImage *img = [UIImage imageNamed:@"StopButton_Set.png"];
     //self.stopButton_Push.imageView = img;
+    
+}
+
+- (IBAction)submitButton:(id)sender {
+    
+    //NSString *homeDir = NSHomeDirectory();//ホームディレクトリを取得
+    
+    NSString *homeDir = [NSString stringWithFormat:@"/Users/Y_Tsurugai/Desktop/GitHub/Alerm"];
+    NSString *filepath = [homeDir stringByAppendingPathComponent:@"pastData.txt"];//書き込みたいファイルのパスを生成
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if (![fileManager fileExistsAtPath:filepath]) {
+
+        BOOL result = [fileManager createFileAtPath:filepath contents:[NSData data] attributes:nil];//空のファイルを作成
+        
+        if (!result) {
+            NSLog(@"Failed creating the file.");
+            return;
+            
+        }
+    }
+    
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filepath];//ファイルハンドラを生成
+    
+    if (!fileHandle) {
+        NSLog(@"Failed creating the filehandle.");
+        return;
+    }
+    
+    NSString *pastData = [NSString stringWithFormat:@"%02d:%02d:00\n",setTime.hour,setTime.min];
+    
+    NSData *data = [NSData dataWithBytes:pastData.UTF8String length:pastData.length];
+    
+    [fileHandle seekToEndOfFile];//書き込み位置をファイルの末尾に
+    [fileHandle writeData:data];//セットした時間と分をファイルに登録
     
 }
 @end

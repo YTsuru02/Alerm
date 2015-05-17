@@ -176,7 +176,7 @@
     NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:filepath];//ファイルハンドラを生成
     
     if (!fileHandle) {
-        NSLog(@"Failed creating the filehandle.");
+        NSLog(@"Failed Writing the filehandle.");
         return;
     }
     

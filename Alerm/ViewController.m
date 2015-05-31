@@ -46,6 +46,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    NSLog(@"tet");
     self.clock_setAM.alpha = 0;
     self.clock_setPM.alpha = 0;
     

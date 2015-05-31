@@ -22,7 +22,7 @@
 
 @end
 
-@implementation RevViewController{
+@implementation GestureViewController{
 //
 //  ViewController.m
 //  Alerm
